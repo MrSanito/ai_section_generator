@@ -1,0 +1,161 @@
+{
+  "layout": {
+    "id": "hero-mu1v4jq6-section-p919i",
+    "type": "section",
+    "tag": "section",
+    "className": "relative overflow-hidden py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center transition-all duration-300",
+    "children": [
+      {
+        "id": "hero-mu1v4jq6-section-p919i-0-container-rwvqv",
+        "type": "container",
+        "tag": "div",
+        "className": "mb-8 inline-flex items-center gap-2",
+        "children": [
+          {
+            "id": "hero-mu1v4jq6-section-p919i-0-container-rwvqv-0-badge-xu5i9",
+            "type": "badge",
+            "tag": "span",
+            "content": "✨ Next-Gen AI Section Builder v2.0 is Live",
+            "className": "inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/80 shadow-xs hover:bg-indigo-100 transition-colors cursor-pointer"
+          }
+        ]
+      },
+      {
+        "id": "hero-mu1v4jq6-section-p919i-1-container-wv4ef",
+        "type": "container",
+        "tag": "div",
+        "className": "max-w-4xl mx-auto space-y-6",
+        "children": [
+          {
+            "id": "hero-mu1v4jq6-section-p919i-1-container-wv4ef-0-heading-aejcj",
+            "type": "heading",
+            "tag": "h1",
+            "content": "Generate Beautiful Website Sections in Milliseconds",
+            "className": "text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight"
+          },
+          {
+            "id": "hero-mu1v4jq6-section-p919i-1-container-wv4ef-1-paragraph-vnyv6",
+            "type": "paragraph",
+            "tag": "p",
+            "content": "Turn raw text prompts into production-grade, recursively-rendered web components. Click any heading or text to edit inline, inspect the JSON tree live, and export directly.",
+            "className": "text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+          }
+        ]
+      },
+      {
+        "id": "hero-mu1v4jq6-section-p919i-2-flex-r5lv2",
+        "type": "flex",
+        "tag": "div",
+        "className": "mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto",
+        "children": [
+          {
+            "id": "hero-mu1v4jq6-section-p919i-2-flex-r5lv2-0-button-xa1ts",
+            "type": "button",
+            "tag": "button",
+            "content": "Start Generating Free 🚀",
+            "className": "w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-base text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition-all hover:-translate-y-0.5 cursor-pointer"
+          },
+          {
+            "id": "hero-mu1v4jq6-section-p919i-2-flex-r5lv2-1-button-5fp9g",
+            "type": "button",
+            "tag": "button",
+            "content": "Photo Khicho",
+            "className": "w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-base text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 shadow-xs transition-all cursor-pointer"
+          }
+        ]
+      },
+      {
+        "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b",
+        "type": "container",
+        "tag": "div",
+        "className": "mt-16 pt-12 border-t border-slate-200/80 max-w-3xl mx-auto",
+        "children": [
+          {
+            "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-0-paragraph-8ck2d",
+            "type": "paragraph",
+            "tag": "p",
+            "content": "TRUSTED BY OVER 15,000+ CREATORS AND DESIGNERS WORLDWIDE",
+            "className": "text-xs font-bold tracking-widest text-slate-400 uppercase mb-8"
+          },
+          {
+            "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd",
+            "type": "grid",
+            "tag": "div",
+            "className": "grid grid-cols-3 gap-6 text-center",
+            "children": [
+              {
+                "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-0-container-3n1ec",
+                "type": "container",
+                "tag": "div",
+                "className": "space-y-1",
+                "children": [
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-0-container-3n1ec-0-heading-dw65z",
+                    "type": "heading",
+                    "tag": "h3",
+                    "content": "99.9%",
+                    "className": "text-2xl sm:text-3xl font-extrabold text-slate-900"
+                  },
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-0-container-3n1ec-1-paragraph-di7e4",
+                    "type": "paragraph",
+                    "tag": "p",
+                    "content": "Client Satisfaction",
+                    "className": "text-xs sm:text-sm text-slate-500 font-medium"
+                  }
+                ]
+              },
+              {
+                "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-1-container-7fhlm",
+                "type": "container",
+                "tag": "div",
+                "className": "space-y-1",
+                "children": [
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-1-container-7fhlm-0-heading-k2s8a",
+                    "type": "heading",
+                    "tag": "h3",
+                    "content": "< 200ms",
+                    "className": "text-2xl sm:text-3xl font-extrabold text-indigo-600"
+                  },
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-1-container-7fhlm-1-paragraph-dg5rw",
+                    "type": "paragraph",
+                    "tag": "p",
+                    "content": "Render Speed",
+                    "className": "text-xs sm:text-sm text-slate-500 font-medium"
+                  }
+                ]
+              },
+              {
+                "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-2-container-4axh1",
+                "type": "container",
+                "tag": "div",
+                "className": "space-y-1",
+                "children": [
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-2-container-4axh1-0-heading-f8aqh",
+                    "type": "heading",
+                    "tag": "h3",
+                    "content": "4.9 / 5",
+                    "className": "text-2xl sm:text-3xl font-extrabold text-slate-900"
+                  },
+                  {
+                    "id": "hero-mu1v4jq6-section-p919i-3-container-84m0b-1-grid-52rkd-2-container-4axh1-1-paragraph-wbw27",
+                    "type": "paragraph",
+                    "tag": "p",
+                    "content": "ProductHunt Rating",
+                    "className": "text-xs sm:text-sm text-slate-500 font-medium"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "prompt": "Modern SaaS hero section wit...",
+  "savedAt": "2026-09-14T23:18:08.138Z",
+  "version": 2
+}
