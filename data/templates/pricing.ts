@@ -4,13 +4,13 @@ export const pricingTemplate: UIElementNode = {
   id: 'pricing-section',
   type: 'section',
   tag: 'section',
-  className: 'py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full transition-all duration-300',
+  className: 'py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full transition-all duration-300',
   children: [
     {
       id: 'pricing-header-container',
       type: 'container',
       tag: 'div',
-      className: 'text-center max-w-3xl mx-auto mb-16 space-y-4',
+      className: 'text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16 space-y-3 sm:space-y-4',
       children: [
         {
           id: 'pricing-badge',
@@ -24,14 +24,14 @@ export const pricingTemplate: UIElementNode = {
           type: 'heading',
           tag: 'h2',
           content: 'Simple, Transparent Pricing For Everyone',
-          className: 'text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight',
+          className: 'text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight text-balance leading-tight',
         },
         {
           id: 'pricing-sub-heading',
           type: 'paragraph',
           tag: 'p',
           content: 'Start free and scale as you grow. No hidden fees, no credit card required to begin your 14-day trial.',
-          className: 'text-lg text-slate-600 dark:text-neutral-400 max-w-2xl mx-auto',
+          className: 'text-sm sm:text-base md:text-lg text-slate-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed px-2',
         },
       ],
     },
@@ -39,14 +39,14 @@ export const pricingTemplate: UIElementNode = {
       id: 'pricing-cards-grid',
       type: 'grid',
       tag: 'div',
-      className: 'grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch',
+      className: 'grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-6xl mx-auto',
       children: [
         // Card 1: Starter
         {
           id: 'card-starter',
           type: 'card',
           tag: 'div',
-          className: 'flex flex-col justify-between p-8 rounded-2xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-all duration-200 hover:border-slate-300 dark:hover:border-neutral-600',
+          className: 'flex flex-col justify-between p-6 sm:p-7 lg:p-8 rounded-2xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-all duration-200 hover:border-slate-300 dark:hover:border-neutral-600',
           children: [
             {
               id: 'starter-header-group',
@@ -79,7 +79,7 @@ export const pricingTemplate: UIElementNode = {
                       type: 'heading',
                       tag: 'span',
                       content: '$10',
-                      className: 'text-4xl font-extrabold text-slate-900 dark:text-white',
+                      className: 'text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white',
                     },
                     {
                       id: 'starter-period',
@@ -151,7 +151,7 @@ export const pricingTemplate: UIElementNode = {
           id: 'card-pro',
           type: 'card',
           tag: 'div',
-          className: 'relative flex flex-col justify-between p-8 rounded-2xl bg-white dark:bg-neutral-800 border-2 border-[#E8823C] shadow-xl shadow-orange-500/10 scale-105 z-10',
+          className: 'relative flex flex-col justify-between p-6 sm:p-7 lg:p-8 rounded-2xl bg-white dark:bg-neutral-800 border-2 border-[#E8823C] shadow-xl shadow-orange-500/10 md:scale-105 md:-translate-y-2 z-10',
           children: [
             {
               id: 'pro-header-group',
@@ -199,7 +199,7 @@ export const pricingTemplate: UIElementNode = {
                       type: 'heading',
                       tag: 'span',
                       content: '$29',
-                      className: 'text-4xl font-extrabold text-slate-900 dark:text-white',
+                      className: 'text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white',
                     },
                     {
                       id: 'pro-period',
@@ -278,7 +278,7 @@ export const pricingTemplate: UIElementNode = {
           id: 'card-enterprise',
           type: 'card',
           tag: 'div',
-          className: 'flex flex-col justify-between p-8 rounded-2xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-all duration-200 hover:border-slate-300 dark:hover:border-neutral-600',
+          className: 'flex flex-col justify-between p-6 sm:p-7 lg:p-8 rounded-2xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-all duration-200 hover:border-slate-300 dark:hover:border-neutral-600',
           children: [
             {
               id: 'enterprise-header-group',
@@ -311,7 +311,7 @@ export const pricingTemplate: UIElementNode = {
                       type: 'heading',
                       tag: 'span',
                       content: '$50',
-                      className: 'text-4xl font-extrabold text-slate-900 dark:text-white',
+                      className: 'text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white',
                     },
                     {
                       id: 'enterprise-period',
@@ -383,14 +383,14 @@ export const pricingTemplate: UIElementNode = {
       id: 'pricing-footer-note',
       type: 'container',
       tag: 'div',
-      className: 'mt-12 text-center',
+      className: 'mt-8 sm:mt-12 text-center px-2',
       children: [
         {
           id: 'pricing-guarantee-text',
           type: 'paragraph',
           tag: 'p',
           content: '🛡️ 30-Day Money Back Guarantee • No contract lock-in • Switch or cancel anytime',
-          className: 'text-sm font-medium text-slate-500 dark:text-neutral-400',
+          className: 'text-xs sm:text-sm font-medium text-slate-500 dark:text-neutral-400 leading-normal',
         },
       ],
     },

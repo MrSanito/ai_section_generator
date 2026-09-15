@@ -47,6 +47,8 @@ body {
 }
 
 .viewport-mobile [class*="grid-cols-"],
+.viewport-mobile .sm\:grid-cols-2,
+.viewport-mobile .sm\:grid-cols-3,
 .viewport-mobile .md\:grid-cols-2,
 .viewport-mobile .md\:grid-cols-3,
 .viewport-mobile .lg\:grid-cols-2,
@@ -55,9 +57,14 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
+.viewport-mobile .sm\:flex-row,
 .viewport-mobile .md\:flex-row,
 .viewport-mobile .lg\:flex-row {
   flex-direction: column !important;
+}
+
+.viewport-mobile .sm\:w-auto {
+  width: 100% !important;
 }
 
 .viewport-mobile .md\:items-start,
@@ -70,8 +77,16 @@ body {
   text-align: center !important;
 }
 
+.viewport-mobile .scale-105,
+.viewport-mobile .md\:scale-105,
+.viewport-mobile .md\:-translate-y-2 {
+  transform: none !important;
+}
+
+.viewport-mobile .py-16,
 .viewport-mobile .py-20,
-.viewport-mobile .py-24 {
+.viewport-mobile .py-24,
+.viewport-mobile .py-28 {
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
@@ -85,27 +100,36 @@ body {
   padding-right: 1rem !important;
 }
 
-.viewport-mobile .p-8 {
+.viewport-mobile .p-6,
+.viewport-mobile .p-8,
+.viewport-mobile .sm\:p-12,
+.viewport-mobile .sm\:p-16,
+.viewport-mobile .md\:p-16 {
   padding: 1.25rem !important;
 }
 
+.viewport-mobile .gap-6,
 .viewport-mobile .gap-8,
 .viewport-mobile .gap-12 {
   gap: 1.25rem !important;
 }
 
+.viewport-mobile .text-2xl,
 .viewport-mobile .text-3xl,
 .viewport-mobile .text-4xl,
 .viewport-mobile .text-5xl,
+.viewport-mobile .sm\:text-4xl,
 .viewport-mobile .sm\:text-5xl,
 .viewport-mobile .sm\:text-6xl,
+.viewport-mobile .md\:text-5xl,
 .viewport-mobile .lg\:text-6xl {
-  font-size: 1.625rem !important;
-  line-height: 2rem !important;
+  font-size: 1.5rem !important;
+  line-height: 1.85rem !important;
 }
 
 .viewport-mobile .text-lg,
-.viewport-mobile .sm\:text-xl {
+.viewport-mobile .sm\:text-xl,
+.viewport-mobile .lg\:text-xl {
   font-size: 0.925rem !important;
   line-height: 1.35rem !important;
 }
@@ -131,8 +155,14 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 
-.viewport-tablet .py-24 {
+.viewport-tablet .py-20,
+.viewport-tablet .py-24,
+.viewport-tablet .py-28 {
   padding-top: 3.5rem !important;
   padding-bottom: 3.5rem !important;
+}
+
+.viewport-tablet .scale-105 {
+  transform: scale(1.02) !important;
 }
 
