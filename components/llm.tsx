@@ -48,8 +48,6 @@ export interface ChatMessage {
 
 const DEFAULT_CHATS: ChatHistoryItem[] = [
   { id: "c1", title: "Untitled Chat", active: true },
-  { id: "c2", title: "Untitled Chat", active: false },
-  { id: "c3", title: "markdown chat", active: false },
 ];
 
 const DEFAULT_SUGGESTIONS: string[] = [

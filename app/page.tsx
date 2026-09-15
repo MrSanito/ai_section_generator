@@ -7,12 +7,6 @@ import {
   SaveResponseBody,
 } from '@/types/section';
 import { updateNodeContent, countNodes, treeToHtml } from '@/lib/treeUtils';
-import {
-  pricingTemplate,
-  heroTemplate,
-  featuresTemplate,
-  ctaTemplate,
-} from '@/data/templates';
 import { DynamicNodeRenderer } from '@/components/DynamicNodeRenderer';
 import { JsonInspectorModal } from '@/components/JsonInspectorModal';
 import {
@@ -88,122 +82,14 @@ const INITIAL_CHATS: ChatSession[] = [
     future: [],
     saveStatus: 'saved',
     lastSavedTime: null,
-    layoutType: 'pricing',
-    matchedKeyword: 'pricing',
-  },
-  {
-    id: 'c2',
-    title: 'SaaS Hero Banner',
-    active: false,
-    messages: [
-      {
-        id: 'msg-hero-user',
-        role: 'user',
-        content: 'Modern SaaS hero section with CTA buttons and metrics',
-      },
-      {
-        id: 'msg-hero-ai',
-        role: 'assistant',
-        content: 'Generated HERO section based on keyword "hero".',
-        layoutTree: heroTemplate,
-        layoutType: 'hero',
-        matchedKeyword: 'hero',
-      },
-    ],
-    currentLayoutTree: heroTemplate,
-    history: [],
-    future: [],
-    saveStatus: 'saved',
-    lastSavedTime: null,
     layoutType: 'hero',
     matchedKeyword: 'hero',
   },
-  {
-    id: 'c3',
-    title: 'Features Grid',
-    active: false,
-    messages: [
-      {
-        id: 'msg-features-user',
-        role: 'user',
-        content: 'Feature grid with 4 capability cards',
-      },
-      {
-        id: 'msg-features-ai',
-        role: 'assistant',
-        content: 'Generated FEATURES section based on keyword "features".',
-        layoutTree: featuresTemplate,
-        layoutType: 'features',
-        matchedKeyword: 'features',
-      },
-    ],
-    currentLayoutTree: featuresTemplate,
-    history: [],
-    future: [],
-    saveStatus: 'saved',
-    lastSavedTime: null,
-    layoutType: 'features',
-    matchedKeyword: 'features',
-  },
-  {
-    id: 'c4',
-    title: 'Pricing Tiers',
-    active: false,
-    messages: [
-      {
-        id: 'msg-pricing-user',
-        role: 'user',
-        content: 'A pricing section with 3 tiers and pro highlight',
-      },
-      {
-        id: 'msg-pricing-ai',
-        role: 'assistant',
-        content: 'Generated PRICING section based on keyword "pricing".',
-        layoutTree: pricingTemplate,
-        layoutType: 'pricing',
-        matchedKeyword: 'pricing',
-      },
-    ],
-    currentLayoutTree: pricingTemplate,
-    history: [],
-    future: [],
-    saveStatus: 'saved',
-    lastSavedTime: null,
-    layoutType: 'pricing',
-    matchedKeyword: 'pricing',
-  },
-  {
-    id: 'c5',
-    title: 'Call to Action Banner',
-    active: false,
-    messages: [
-      {
-        id: 'msg-cta-user',
-        role: 'user',
-        content: 'High converting CTA banner with guarantee',
-      },
-      {
-        id: 'msg-cta-ai',
-        role: 'assistant',
-        content: 'Generated CTA section based on keyword "cta".',
-        layoutTree: ctaTemplate,
-        layoutType: 'cta',
-        matchedKeyword: 'cta',
-      },
-    ],
-    currentLayoutTree: ctaTemplate,
-    history: [],
-    future: [],
-    saveStatus: 'saved',
-    lastSavedTime: null,
-    layoutType: 'cta',
-    matchedKeyword: 'cta',
-  },
 ];
 
-const STORAGE_KEY = 'ai_section_generator_chats_v2';
-const ACTIVE_CHAT_KEY = 'ai_section_generator_active_chat_id_v2';
-const THEME_KEY = 'ai_section_generator_theme_v2';
+const STORAGE_KEY = 'ai_section_generator_chats_v3';
+const ACTIVE_CHAT_KEY = 'ai_section_generator_active_chat_id_v3';
+const THEME_KEY = 'ai_section_generator_theme_v3';
 
 export default function Home() {
   const [chatList, setChatList] = useState<ChatSession[]>(INITIAL_CHATS);
@@ -282,6 +168,14 @@ ${treeToHtml(node, 1)}
   // Load chats & active chat from localStorage on initial render
   useEffect(() => {
     try {
+      // Clean up legacy keys that stored preloaded dummy chats
+      ['ai_section_generator_chats_v1', 'ai_section_generator_chats_v2'].forEach((k) => {
+        try { localStorage.removeItem(k); } catch (_) {}
+      });
+      ['ai_section_generator_active_chat_id_v1', 'ai_section_generator_active_chat_id_v2'].forEach((k) => {
+        try { localStorage.removeItem(k); } catch (_) {}
+      });
+
       const savedChats = localStorage.getItem(STORAGE_KEY);
       const savedActiveId = localStorage.getItem(ACTIVE_CHAT_KEY);
       const savedTheme = localStorage.getItem(THEME_KEY);
@@ -289,11 +183,29 @@ ${treeToHtml(node, 1)}
       if (savedChats) {
         const parsed = JSON.parse(savedChats);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setChatList(parsed);
-          if (savedActiveId && parsed.some((c: ChatSession) => c.id === savedActiveId)) {
-            setActiveChatId(savedActiveId);
+          // Filter out any legacy dummy chats
+          const cleanChats = parsed.filter(
+            (c: ChatSession) =>
+              c.id !== 'c2' &&
+              c.id !== 'c3' &&
+              c.id !== 'c4' &&
+              c.id !== 'c5' &&
+              c.title !== 'Call to Action Banner' &&
+              c.title !== 'SaaS Hero Banner' &&
+              c.title !== 'Features Grid' &&
+              c.title !== 'Pricing Tiers'
+          );
+
+          if (cleanChats.length > 0) {
+            setChatList(cleanChats);
+            if (savedActiveId && cleanChats.some((c: ChatSession) => c.id === savedActiveId)) {
+              setActiveChatId(savedActiveId);
+            } else {
+              setActiveChatId(cleanChats[0].id);
+            }
           } else {
-            setActiveChatId(parsed[0].id);
+            setChatList(INITIAL_CHATS);
+            setActiveChatId(INITIAL_CHATS[0].id);
           }
         }
       }
